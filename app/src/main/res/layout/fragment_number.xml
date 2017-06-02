@@ -4,30 +4,58 @@
     android:layout_height="match_parent"
     android:background="#b0f6f3"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".NumberFragment">
 
     <TextView
         android:id="@+id/tvFrag1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Only SMS containing this number" />
+        android:fontFamily="sans-serif-condensed"
+        android:text="Only SMS containing this number"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
 
     <EditText
         android:id="@+id/etNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
         android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRetrieve1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Retrieve SMS"
+            android:textColor="@android:color/white" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnEmail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="EMAIL"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvResult1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btnRetrieve1"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retrieve SMS" />
+        android:fontFamily="sans-serif-condensed" />
 
 </LinearLayout>

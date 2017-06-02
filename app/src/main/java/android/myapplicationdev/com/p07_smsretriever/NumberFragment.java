@@ -3,6 +3,7 @@ package android.myapplicationdev.com.p07_smsretriever;
 
 import android.Manifest;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -26,7 +27,7 @@ import android.widget.Toast;
  */
 public class NumberFragment extends Fragment {
 
-    Button btn;
+    Button btn, btnEmail;
     TextView tvResult1;
     EditText et;
 
@@ -39,7 +40,31 @@ public class NumberFragment extends Fragment {
         tvResult1 = (TextView) view.findViewById(R.id.tvResult1);
 
         btn = (Button) view.findViewById(R.id.btnRetrieve1);
+        btnEmail = (Button) view.findViewById(R.id.btnEmail1);
         et = (EditText) view.findViewById(R.id.etNumber);
+
+        btnEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // The action you want this intent to do;
+                // ACTION_SEND is used to indicate sending text
+                Intent email = new Intent(Intent.ACTION_SEND);
+                // Put essentials like email address, subject & body text
+                email.putExtra(Intent.EXTRA_EMAIL,
+                        new String[]{"jason_lim@rp.edu.sg"});
+                email.putExtra(Intent.EXTRA_SUBJECT,
+                        "Test Email from C347");
+                email.putExtra(Intent.EXTRA_TEXT,
+                        tvResult1.getText());
+                // This MIME type indicates email
+                email.setType("message/rfc822");
+                // createChooser shows user a list of app that can handle
+                // this MIME type, which is, email
+                startActivity(Intent.createChooser(email,
+                        "Choose an Email client :"));
+
+            }
+        });
 
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
