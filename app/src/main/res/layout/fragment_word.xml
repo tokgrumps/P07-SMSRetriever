@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6b0bf"
+    android:orientation="vertical"
+    tools:context=".WordFragment">
+
+    <TextView
+        android:id="@+id/tvFrag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only SMS with this word"
+        android:textAppearance="@android:style/TextAppearance.Medium" />
+
+    <EditText
+        android:id="@+id/etWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Word" />
+
+    <EditText
+        android:id="@+id/etWord2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second Word" />
+
+    <Button
+        android:id="@+id/btnRetrieve2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrieve SMS" />
+
+    <TextView
+        android:id="@+id/tvResult2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
